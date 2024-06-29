@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню керування</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Статистика</h1>
+    <div class="btn-group">
+        <form method="GET" action="/all-goods">
+            <button type="submit" class="btn">Всі товари</button>
+        </form>
+        <form method="GET" action="/group-goods">
+            <button type="submit" class="btn">Всі товари заданої групи</button>
+        </form>
+        <form method="GET" action="/good-prices">
+            <button type="submit" class="btn">Загальна вартість товарів</button>
+        </form>
+        <form method="GET" action="/group-prices">
+            <button type="submit" class="btn">Загальна вартість товарів заданої категорії</button>
+        </form>
+    </div>
+    <form method="GET" action="/menu">
+        <button type="submit" class="btn">Назад</button>
+    </form>
+</div>
+</body>
+</html>
